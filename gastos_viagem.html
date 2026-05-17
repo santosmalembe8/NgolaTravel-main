@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NgolaTravel</title>
+   <link rel="stylesheet" href="gastos_viagem.css">
+   
+  </head>
+  <body>
+
+       <header class="cabecalho">
+      <div class="logotipo">
+        <img src="img/logo.png" alt="logotipo" />
+      </div>
+
+      <button id="btn_mobile" class="btn_mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="nav_bar">
+        <ul class="listas">
+          <li>
+            <img src="img/icone/botao-home.png" alt="página Inicial">
+            <a href="index.html">Página Inicial</a>
+          </li>
+          <li>
+            <img src="img/icone/reserva.png" alt="reservas">
+            <a href="#">Reservas</a>
+          </li>
+
+          <li>
+            <img src="img/icone/pagamento-em-dinheiro.png" alt="cambio">
+            <a href="#">Taxa de Câmbio</a>
+          </li>
+
+          <li>
+            <img src="img/icone/telefone.png" alt="contactos">
+            <a href="#contactos"> Contactos</a>
+          </li>
+          <li>
+            <img src="img/icone/informacao.png" alt="sobre">
+            <a href="#">Sobre Nós</a>
+          </li>
+
+          <li>
+            <img src="img/icone/perfil-de-usuario.png" alt="login">
+            <a href="#"> Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="conteudo_principal">
+        <section class="calculos">
+            <div class="cabeca_calculo">
+                <h2>Qual é o seu orçamento?</h2>
+                <p>Diga-nos quanto pretende gastar e encontraremos os melhores distinos em Angola, de acordo ao seu bolso.</p>
+            </div>
+            
+            <div class="card_calculo">
+                <span>Província</span>
+                <select name="" id="">
+                    <option value="">Selecionar Província</option>
+                    <option value="">Luanda</option>
+                    <option value="">Huambo</option>
+                    <option value="">Huíla</option>
+                    <option value="">Benguela</option>
+                    <option value="">Bengo</option>
+                    <option value="">Namibe</option>
+                    <option value="">Lunda Norte</option>
+                    <option value="">Lunda Sul</option>
+                    <option value="">Kwanza Sul</option>
+                    <option value="">Kwanza Norte</option>
+                    <option value="">Malange</option>
+                    <option value="">Bié</option>
+                    <option value="">Moxico</option>
+                    <option value="">Cunene</option>
+                    <option value="">Bié</option>
+                    <option value="">Zaire</option>
+                    <option value="">Cabinda</option>
+                    <option value="">Uíge</option>
+                </select>
+                
+                <span>Meu orçamento</span>
+                <div class="area_calculo">
+                    <input type="number" placeholder="Digete seu orçamento">
+                </div>
+                <button>Calcular destino</button>
+            </div>
+        </section>
+
+        <section class="destinos">
+            <div class="cabeca_destino">
+                <h2>Os Melhores Destinos para o Seu Orçamento</h2>
+                <span>Aqui estão os pontos turisticos que cabem no seu bolso no orçamento de até <strong>100.000:</strong></span>
+            </div>
+
+            <div class="card_destino">
+                <div class="card">
+                    <div class="imagem">
+                        <img src="img/provincias/benguela.jpg" alt="benguela">
+                    </div>
+                    <div class="info">
+                        <h3>Benguela</h3>
+                        <span>Relaxe em praias paradisiacas, com a praia da baia azul ea praia Morena.</span>
+                        <div class="acao">
+                            <button><a href="destino.html">Ver destino</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imagem">
+                        <img src="img/provincias/huambo.jpg" alt="benguela">
+                    </div>
+                    <div class="info">
+                        <h3>Huambo</h3>
+                        <span>Relaxe em praias paradisiacas, com a praia da baia azul ea praia Morena.</span>
+                        <div class="acao">
+                            <button><a href="#">Ver destino</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imagem">
+                        <img src="img/provincias/namibe.jpg" alt="benguela">
+                    </div>
+                    <div class="info">
+                        <h3>Namibe</h3>
+                        <span>Relaxe em praias paradisiacas, com a praia da baia azul ea praia Morena.</span>
+                        <div class="acao">
+                            <button><a href="#">Ver destino</a></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <script src="index.js"></script>
+  </body>
+</html>
