@@ -368,6 +368,7 @@ body {
 .servicos {
   height: auto;
   margin-top: 10px;
+  background-color: #F1F3F5;
 }
 
 .servicos .info_servicos h2 {
