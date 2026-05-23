@@ -125,8 +125,56 @@ body {
 }
 
 .conteudo_principal {
-  margin: 110px auto;
+  margin:70px auto;
+
 }
+.conteudo_principal .imagem{
+  background: rgba(21, 21, 21, 0.9);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(img/provincias/benguela.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  height: 50vh;
+  position: relative;
+}
+.conteudo_principal .info{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+
+}
+
+.conteudo_principal .localizacao{
+  display: flex;
+  color: white;
+  padding:5px;
+}
+
+.conteudo_principal .valor{
+  display: flex;
+  width: auto;
+  margin:5px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.conteudo_principal .dinheiro{
+  background-color: #FBC138;
+  height: 100%;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.conteudo_principal .media{
+  padding: 10px;
+}
+
+
+/*
 .conteudo_principal .cabeca_destino {
   display: flex;
   flex-direction: column;
