@@ -7,6 +7,4 @@ function cor1(){
 function cor2(){
     core1.style.background="transparent";
     core2.style.background="#086785";
-
-
 }
