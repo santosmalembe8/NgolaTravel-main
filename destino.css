@@ -151,12 +151,15 @@ body {
   display: flex;
   color: white;
   padding:5px;
+  margin: 5px;
+  margin-bottom:-5px;
 }
 
+/*Area dentri da imagem da provincia que mostrar o valor para estar hospedado nela*/
 .conteudo_principal .valor{
   display: flex;
   width: auto;
-  margin:5px;
+  margin:10px;
   background-color: white;
   border-radius: 20px;
 }
@@ -172,6 +175,57 @@ body {
 .conteudo_principal .media{
   padding: 10px;
 }
+
+/*Texto abaixo da imagem da provincia*/
+.conteudo_principal .info_pro{
+  padding: 10px;
+  width:80%;
+  color: var(--cor-texto);
+  margin: 10px;
+  font-size: clamp(18px, 20px, 25px);
+}
+
+.conteudo_principal .pontos_turisticos .card_container{
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo_principal .pontos_turisticos .card_container .card .foto img{
+  width: 190px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.conteudo_principal .pontos_turisticos .card_container .card{
+  background-color: var(--cor-branca);
+  display: flex;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 90%;
+  height: 250px;
+}
+.conteudo_principal .pontos_turisticos .card_container .card .foto{
+  position: relative;
+}
+.conteudo_principal .pontos_turisticos .card_container .card .foto > .valor{
+  position: absolute;
+  top: -8px;
+  border-radius: 0px;
+  left:-9px;
+  color: var(--cor-branca);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  background-color: #FBC138;
+
+}
+
+
+
+
+
 
 
 /*
