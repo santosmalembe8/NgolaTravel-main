@@ -218,6 +218,7 @@ input::placeholder{
 .esqueci a{
   color: var(--cor-principal);
   font-weight: bold;
+  white-space: nowrap;
 }
 
 /* RESPONSIVO */
