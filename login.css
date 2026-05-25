@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --cor-principal: #086785;
+  --cor-branca: white;
+  --cor-preta: black;
+  --cor-texto: #4a4a4a;
+  --fundo-corpo: #edefea;
+  --font_titulo: Arial, Helvetica;
+  --cor-preta_segundaria: #242424;
+}
+body{
+  background-image: url(img/fundo/fundo_body.png);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+}
+
+.login .boas_vindas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  width: 60%;
+  text-align: center;
+}
+.login .boas_vindas h2{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+}
+
+.login .boas_vindas p{
+  color: var(--cor-texto);
+}
+
+.login a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cor-texto);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.login a:hover{
+  color: var(--cor-principal);
+}
+.login .contas{
+    display: flex;
+    gap: 50px;
+    margin: 30px;
+    padding: 10px;
+}
+.login .contas .empresa{
+  padding: 5px;
+}
+.login .contas .usuario{
+  padding: 5px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+form input{
+  border: none;
+  border-bottom: 1px solid var(--cor-texto);
+  padding: 10px;
+  background-color: transparent;
+}
+
+
+form .senha, .email{
+  display: flex;
+  align-items: center;
+}
+
+form .container_form{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
