@@ -108,19 +108,14 @@ body{
   border-radius: 10px;
 }
 
-/* 🔥 FORMULÁRIOS (CORRETO PARA SLIDE LATERAL) */
 .formulario{
   width: 100%;
-
   position: absolute;
   left: 0;
   top: 0;
-
   opacity: 0;
   pointer-events: none;
-
   transform: translateX(0);
-
   transition: all 0.25s ease;
 }
 
@@ -128,7 +123,6 @@ body{
 .formulario.active{
   opacity: 1;
   pointer-events: auto;
-
   position: relative; /* entra no fluxo quando ativo */
 }
 
@@ -148,11 +142,6 @@ body{
   display: flex;
   align-items: center;
   gap: 10px;
-}
-.email img,
-.senha img,
-.nif img{
-  width: 24px;
 }
 
 input{
