@@ -3,55 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link rel="stylesheet" href="login.css">
+    <title>Login</title>
 </head>
 <body>
 
     <section class="login">
+
+        <!-- BOAS VINDAS -->
         <div class="boas_vindas">
             <h2>Bem-vindo de Volta!</h2>
-            <p>Entre na sua conta para contar planejando os melhores destinos</p>
+            <p>
+                Entre na sua conta para continuar planejando
+                os melhores destinos
+            </p>
         </div>
-    
+
+        <!-- USUÁRIO / EMPRESA -->
         <div class="contas">
-            <div class="usuario">
-                <a href="#"><img src="img/icone/usuario.png" alt="login usuario">Usuário</a>
+
+            <div class="usuario active" id="usuarioBtn">
+                <a href="#">
+                    <img src="img/icone/usuario.png" alt="Usuário">
+                    Usuário
+                </a>
             </div>
-            <div class="empresa">
-                <a href="#"><img src="img/icone/empresa.png" alt="login empresa">Empresa</a>
+
+            <div class="empresa" id="empresaBtn">
+                <a href="#">
+                    <img src="img/icone/empresa.png" alt="Empresa">
+                    Empresa
+                </a>
             </div>
+
         </div>
-    
-        <form action="">
+
+        <!-- FORMULÁRIO USUÁRIO -->
+        <form class="formulario active" id="formUsuario">
+
             <div class="container_form">
+
                 <div class="email">
                     <img src="img/icone/email.png" alt="">
-                    <input type="text" placeholder="Digite o seu email">
+                    <input
+                        type="email"
+                        placeholder="Digite o seu email"
+                    >
                 </div>
+
                 <div class="senha">
-                   <img src="img/icone/senha.png" alt="">
-                    <input id="senha" type="text" placeholder="Digite a sua senha">
+                    <img src="img/icone/senha.png" alt="">
+                    <input
+                        type="password"
+                        placeholder="Digite a sua senha"
+                    >
                 </div>
+
             </div>
+
             <div class="senha_info">
                 <div class="cadastro">
-                   <span>Ainda não tem conta?</span> <a href="#">Cadastra-se</a>
+                    <span>Ainda não tem conta?</span>
+                    <a href="#">Cadastra-se</a>
                 </div>
             </div>
 
             <div class="entrar">
-                <button><a href="#">Entrar</a></button>
+                <button type="submit">
+                    Entrar
+                </button>
             </div>
 
             <div class="esqueci">
-                <a href="#">Esqueci a minha senha</a>
+                <a href="#">
+                    Esqueci a minha senha
+                </a>
             </div>
+
+        </form>
+
+        <!-- FORMULÁRIO EMPRESA -->
+        <form class="formulario" id="formEmpresa">
+
+            <div class="container_form">
+
+                <div class="email">
+                    <img src="img/icone/email.png" alt="">
+                    <input
+                        type="email"
+                        placeholder="Digete o NIF da empresa"
+                    >
+                </div>
+
+                <div class="senha">
+                    <img src="img/icone/senha.png" alt="">
+                    <input
+                        type="password"
+                        placeholder="Senha da empresa"
+                    >
+                </div>
+
+            </div>
+<div class="senha_info">
+                <div class="cadastro">
+                    <span>Ainda não tem conta?</span>
+                    <a href="#">Cadastra-se</a>
+                </div>
+            </div>
+
+            <div class="entrar">
+                <button type="submit">
+                    Entrar
+                </button>
+            </div>
+
+            <div class="esqueci">
+                <a href="#">
+                    Esqueci a minha senha
+                </a>
+            </div>
+
+
         </form>
     </section>
 
+    <script src="script.js"></script>
 
-
-    
 </body>
 </html>
