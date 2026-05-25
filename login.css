@@ -36,7 +36,7 @@ body{
   flex-direction: column;
   justify-content: center;
   justify-self: center;
-  width: 60%;
+  width:70%;
   text-align: center;
 }
 .login .boas_vindas h2{
@@ -64,6 +64,8 @@ body{
     gap: 50px;
     margin: 30px;
     padding: 10px;
+    border: 1px solid rgba(2, 180, 174, 0.157);
+    background-color: rgb(8, 115, 134, 886, 183, 0,0);
 }
 .login .contas .empresa{
   padding: 5px;
@@ -77,23 +79,77 @@ form{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 95%;
+  box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2);
+  background: rgba(236, 231, 231, 0.12);
+  backdrop-filter: bur(10px);
+  --wibkit-backdrop-filter:blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 form input{
   border: none;
   border-bottom: 1px solid var(--cor-texto);
   padding: 10px;
   background-color: transparent;
+  outline: none;
+  width: 75%;
 }
-
 
 form .senha, .email{
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 form .container_form{
   display: flex;
   flex-direction: column;
   gap: 40px;
+  width:90%;
+  justify-content: center;
+  align-items: center;
 }
+
+form .senha_info{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 20px;
+  width: 75%;
+  align-items: center;
+  font-size: clamp(13px, 14px, 15px);
+}
+form .cadastro{
+  display: flex;
+  gap: 10px;
+}
+form .cadastro a{
+  text-align: center;
+  color: var(--cor-principal);
+}
+
+form .entrar{
+  width: 74%;
+}
+form .esqueci{
+  padding: 20px;
+}
+form .esqueci a{
+  color: var(--cor-principal);
+}
+form .entrar button{
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  width: 100%;
+  background-color: var(--cor-principal);
+  border: none;
+  border-radius: 10px;
+}
+
+form .entrar button a{
+  text-align: center;
+  color: var(--cor-branca);
+}
+
