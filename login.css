@@ -19,7 +19,6 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  overflow-y: hidden;
 }
 
 /* LOGIN */
@@ -29,6 +28,8 @@ body{
   align-items: center;
   margin-top: 70px;
   padding: 20px;
+
+  position: relative; /* 🔥 importante para sobreposição */
 }
 
 /* BOAS VINDAS */
@@ -49,7 +50,7 @@ body{
   font-size: 1rem;
 }
 
-/* CONTAINER USUÁRIO / EMPRESA */
+/* TABS */
 .contas{
   width: 90%;
   display: flex;
@@ -61,7 +62,6 @@ body{
   margin-bottom: 30px;
 }
 
-/* TABS */
 .usuario,
 .empresa{
   width: 50%;
@@ -106,20 +106,28 @@ body{
   border-radius: 10px;
 }
 
-/* FORMULÁRIOS */
+/* 🔥 FORMULÁRIOS (CORRETO PARA SLIDE LATERAL) */
 .formulario{
   width: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transform: translateY(20px);
-  transition: all .4s ease;
+  pointer-events: none;
+
+  transform: translateX(0);
+
+  transition: all 0.25s ease;
 }
 
+/* FORM ATIVO */
 .formulario.active{
   opacity: 1;
-  max-height: 500px;
-  transform: translateY(0);
+  pointer-events: auto;
+
+  position: relative; /* entra no fluxo quando ativo */
 }
 
 /* CAMPOS */
@@ -132,7 +140,8 @@ body{
 }
 
 .email,
-.senha{
+.senha,
+.nif{
   width: 90%;
   display: flex;
   align-items: center;
@@ -140,7 +149,8 @@ body{
 }
 
 .email img,
-.senha img{
+.senha img,
+.nif img{
   width: 24px;
 }
 
@@ -181,11 +191,12 @@ input::placeholder{
 
 /* BOTÃO */
 .entrar{
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   justify-self: center;
-  width: 90%;
   margin-top: 20px;
 }
 
@@ -205,20 +216,12 @@ input::placeholder{
 .esqueci{
   text-align: center;
   margin-top: 25px;
-  border-bottom: 1px solid var(--cor-principal);
-  padding: 15px;
-  width: 90%;
-  justify-self: center;
-  align-content: center;
-  display: flex;
-  justify-content: center;
-  justify-self: center;
 }
 
 .esqueci a{
   color: var(--cor-principal);
   font-weight: bold;
-  white-space: nowrap;
+  text-decoration: underline;
 }
 
 /* RESPONSIVO */
@@ -237,7 +240,8 @@ input::placeholder{
   }
 
   .email,
-  .senha{
+  .senha,
+  .nif{
     width: 95%;
   }
 
