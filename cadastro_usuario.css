@@ -1,0 +1,86 @@
+*{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root{
+  --cor-principal: #086785;
+  --cor-branca: #fff;
+  --cor-preta: #000;
+  --cor-texto: #4a4a4a;
+  --font-padrao:  Arial, Helvetica, sans-serif;
+  --fundo-corpo: #edefea;
+}
+
+body {
+    background-image: url(img/fundo/angola.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 108vh;
+}
+
+.cadastro {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.cadastro .cabeca{
+    gap: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cadastro .cabeca h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-principal);
+}
+
+.cadastro .cabeca span{
+    color: var(--cor-texto);
+    font-family: var;
+}
+
+
+form {
+
+}
+
+form .nome{
+    padding: 10px;
+}
+
+form .nome .nome1{
+    padding: 5px;
+    gap: 10px;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+form .nome  label{
+    margin-left: 8px;
+}
+form .nome .nome1 img{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+form .nome .nome1 input{
+    border-radius: 10px;
+    width: 300px;
+    border: 1px solid var(--cor-principal);
+    padding: 10px 25px 10px 25px;
+}
