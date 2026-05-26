@@ -30,8 +30,7 @@ body{
   align-items: center;
   margin-top: 70px;
   padding: 20px;
-
-  position: relative; /* 🔥 importante para sobreposição */
+  position: relative; /*importante para sobreposição*/
 }
 
 /* BOAS VINDAS */

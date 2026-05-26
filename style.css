@@ -5,6 +5,7 @@
   list-style-type: none;
   text-decoration: none;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 :root {
   --cor-principal: rgba(2, 112, 131, 0.977);
@@ -125,31 +126,55 @@ body {
   transition: 0.5s;
 }
 
+/* Sessão de boas vindas */
 .conteudo_principal .bem_vindo {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   padding: 30px;
   margin: 70px auto;
-  background: rgba(21, 21, 21, 0.9);
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
-    url(img/fundo/fundo1.jpg);
-  background-size: cover;
-  background-position: 43%;
-  background-repeat: no-repeat;
   height: 100vh;
+  overflow: hidden;
 }
+
+/* Vídeo de fundo */
+.conteudo_principal .bem_vindo .video_fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Camada escura sobre o vídeo */
+.conteudo_principal .bem_vindo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: -1;
+}
+
+/* Área da frase */
 .conteudo_principal .bem_vindo .frase_vindas {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px;
+
+  position: relative;
+  z-index: 2;
 }
 
 .conteudo_principal .bem_vindo .frase_vindas h1 {
-  /*Frase boas_vidas*/
   color: var(--cor-branca);
   text-align: center;
   font-size: clamp(40px, 2vw, 50px);
@@ -157,52 +182,72 @@ body {
   line-height: 1.2;
   width: 300px;
 }
+
+/* Slogan */
 .conteudo_principal .bem_vindo .slogan {
-  /*Area com o slogan*/
   display: flex;
   justify-content: center;
   align-items: center;
+
   color: var(--fundo-corpo);
+
+  position: relative;
+  z-index: 2;
 }
+
 .conteudo_principal .bem_vindo .slogan > span {
-  /*slogan*/
   text-align: center;
   font-size: clamp(15px, 2vw, 16px);
 }
+
+/* Área de ação */
 .conteudo_principal .bem_vindo .acao {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin-top: 20px;
   padding: 10px;
   gap: 15px;
   width: 80%;
+
+  position: relative;
+  z-index: 2;
 }
+
+/* Input */
+.conteudo_principal .bem_vindo .acao input {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+/* Botão */
 .conteudo_principal .bem_vindo .acao button {
-  /*Botao do orçamento*/
   background-color: var(--cor-preta_segundaria);
   color: white;
   border: none;
   padding: 13px;
   width: 100%;
   border-radius: 20px;
+
+  transition: 0.5s ease-in-out;
 }
+
 .conteudo_principal .bem_vindo .acao button:hover {
   background-color: #086785;
-  transition: 0.5 ease-in-out;
   cursor: pointer;
 }
+
+/* Link do botão */
 .conteudo_principal .bem_vindo .acao button a {
   color: var(--cor-branca);
+  text-decoration: none;
 }
-.conteudo_principal .bem_vindo .acao input {
-  width: 100%;
-  padding: 13px;
-  border: none;
-  border-radius: 20px;
-}
-/*Fim da sessão de boas vindas*/
+/* Fim da sessão de boas vindas */
 
 .provincias {
   margin-top: -25px;
@@ -231,140 +276,94 @@ body {
 .provincias .frase_curta span {
   text-align: center;
 }
-
 .provincias .container_img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-self: center;
   width: 95%;
-  height: auto;
   gap: 20px;
   padding: 5px;
 }
 
-.provincias .container_img .luanda {
-  background: rgba(21, 21, 21, 0.9);
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
-    url(img/provincias/luanda.jpg);
-  background-size: cover;
-  background-position: 43%;
-  background-repeat: no-repeat;
+/* =========================
+   CARDS BASE (teu design)
+========================= */
+
+.provincias .container_img a {
   width: 100%;
-  height: 30vh;
+  height:35vh;
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #fff;
   font-family: var(--font_titulo);
-  font-size: clamp(18px, 2vw, 20x);
+  font-size: clamp(18px, 2vw, 20px); /* corrigido */
   font-weight: 900;
   border-radius: 50px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+
+  /* ANIMAÇÃO */
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 0.7s ease;
 }
 
-.provincias .container_img .huambo {
-  background: rgba(21, 21, 21, 0.9);
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+/* =========================
+   IMAGENS (mantidas iguais)
+========================= */
+
+.luanda {
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)),
+    url(img/provincias/luanda.jpg);
+}
+
+.huambo {
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)),
     url(img/provincias/huambo.jpg);
-  background-size: cover;
-  background-position: 43%;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: var(--font_titulo);
-  font-size: clamp(18px, 2vw, 20x);
-  font-weight: 900;
-  border-radius: 50px;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.provincias .container_img .huila {
-  background: rgba(21, 21, 21, 0.9);
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+.huila {
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)),
     url(img/provincias/huila.jpg);
-  background-size: cover;
-  background-position: 43%;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: var(--font_titulo);
-  font-size: clamp(18px, 2vw, 20x);
-  font-weight: 900;
-  border-radius: 50px;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.provincias .container_img .benguela {
-  background: rgba(21, 21, 21, 0.9);
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+.benguela {
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)),
     url(img/provincias/benguela.jpg);
-  background-size: cover;
-  background-position: 43%;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: var(--font_titulo);
-  font-size: clamp(18px, 2vw, 20x);
-  font-weight: 900;
-  border-radius: 50px;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
-}
-.provincias .container_img .namibe {
-  background: rgba(21, 21, 21, 0.9);
-  background:
-  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
-    url(img/provincias/namibe.jpg);
-  background-size: cover;
-  background-position: 43%;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: var(--font_titulo);
-  font-size: clamp(18px, 2vw, 20x);
-  font-weight: 900;
-  border-radius: 50px;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.provincias .link {
+.namibe {
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)),
+    url(img/provincias/namibe.jpg);
+}
+
+/* =========================
+   ANIMAÇÃO (entrada esquerda/direita)
+========================= */
+
+.provincias .container_img a.left {
+  transform: translateX(-80px);
+}
+
+.provincias .container_img a.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.provincias .link{
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: 10px;
 }
-.provincias .link a {
-  color: var(--cor-preta_segundaria);
-  text-decoration: underline;
-}
 
+.provincias .link a{
+    color: var(--cor-texto);
+}
 .servicos {
   height: auto;
   margin-top: 10px;

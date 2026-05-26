@@ -14,3 +14,4 @@ document.querySelectorAll('#nav_bar a').forEach(link => {
         btn.classList.remove('active');
     });
 });
+
