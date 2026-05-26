@@ -206,12 +206,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   margin-top: 20px;
   padding: 10px;
   gap: 15px;
   width: 80%;
-
   position: relative;
   z-index: 2;
 }
@@ -250,6 +248,10 @@ body {
 /* Fim da sessão de boas vindas */
 
 .provincias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: -25px;
 }
 .provincias .titulo {
