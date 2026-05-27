@@ -12,7 +12,7 @@
   --cor-branca: #fff;
   --cor-preta: #000;
   --cor-texto: #4a4a4a;
-  --font-padrao:  Arial, Helvetica, sans-serif;
+  --font-padrao: Arial, Helvetica, sans-serif;
   --fundo-corpo: #edefea;
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 .cadastro {
-    margin: 70px auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,14 +50,13 @@ body {
 
 .cadastro .cabeca span{
     color: var(--cor-texto);
-    font-family: var;
+    font-family: var(--font-padrao);
 }
 
-
-form {
-
+form{
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(10px);
 }
-
 form .nome{
     padding: 10px;
 }
@@ -70,6 +69,7 @@ form .nome .nome1{
     width: 100%;
 }
 form .nome  label{
+    font-family: var(--font-padrao);
     margin-left: 8px;
 }
 form .nome .nome1 img{
@@ -79,8 +79,54 @@ form .nome .nome1 img{
 }
 
 form .nome .nome1 input{
+    font-family: var(--font-padrao);
     border-radius: 10px;
     width: 300px;
     border: 1px solid var(--cor-principal);
     padding: 10px 25px 10px 25px;
+}
+
+
+form .criar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    padding: 10px;
+    gap: 10px;
+    width: 96%;
+}
+
+form .criar button{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor-principal);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+} 
+form .criar button:hover{
+    border: 1px solid var(--cor-principal);
+    background-color: transparent;
+    transition: 0.6s ease-in-out;
+}
+form .criar button a{
+    color: var(--cor-branca);
+    font-family: var(--font-padrao);
+}
+
+form .criar button:hover a{
+    color: var(--cor-principal);
+}
+
+form .criar span{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+form .criar span a{
+    color: var(--cor-principal);
 }
