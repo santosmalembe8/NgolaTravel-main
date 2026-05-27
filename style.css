@@ -15,11 +15,18 @@
   --fundo-corpo: #edefea;
   --font_titulo: Arial, Helvetica;
   --cor-preta_segundaria: #242424;
+}@font-face{
+  font-family: 'Neo_botão';
+  src: url(Font/Titillium/TitilliumText22L-600wt.otf)
 }
-  
+
+  @font-face {
+    font-family: 'Neo_paragrafo';
+    src: url(Font/Titillium/TitilliumMaps29L-400wt.otf);
+  }
 body {
   background-color: var(--fundo-corpo);
-  font-family: var(--font_titulo);
+  font-family: 'Neo',sans-serif;
 }
 
 .cabecalho {
@@ -78,6 +85,10 @@ body {
 }
 
 /* QUANDO ABRIR */
+@font-face {
+  font-family: 'Neo';
+  src: url(Font/Titillium/TitilliumMaps29L-800wt.otf);
+}
 #nav_bar.mostrar {
   bottom: 0;
 }
@@ -87,6 +98,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr ;
   gap: 15px;
+  font-family:;
   padding: 20px;
   justify-content: center;
   align-items: center;
@@ -177,7 +189,7 @@ body {
   color: var(--cor-branca);
   text-align: center;
   font-size: clamp(40px, 2vw, 50px);
-  font-family: var(--font_titulo);
+  font-family: 'Neo', sans-serif;
   line-height: 1.2;
   width: 300px;
 }
@@ -195,6 +207,7 @@ body {
 .conteudo_principal .bem_vindo .slogan > span {
   text-align: center;
   font-size: clamp(15px, 2vw, 16px);
+  font-family: 'Neo_paragrafo';
 }
 
 /* Área de ação */
@@ -260,6 +273,7 @@ body {
 .provincias .titulo h2 {
   font-size: clamp(25px, 2vw, 30px);
   text-align: center;
+  font-family: 'Neo', sans-serif;
 }
 
 .provincias .frase_curta {
@@ -272,6 +286,7 @@ body {
 }
 .provincias .frase_curta span {
   text-align: center;
+  font-family: 'Neo_paragrafo';
 
 }
 .provincias .container_img {
@@ -377,7 +392,7 @@ ANIMAÇÃO (entrada esquerda/direita)
 }
 .servicos .info_servicos h2 {
   color: black;
-  font-family: var(--font_titulo);
+font-family: 'Neo', sans-serif;
   padding: 10px;
   font-size: clamp(25px, 2vw, 30px);
 }
@@ -386,6 +401,7 @@ ANIMAÇÃO (entrada esquerda/direita)
   color: #272727;
   padding: 10px;
   font-size: clamp(16px, 2vw, 17px);
+  font-family: 'Neo_paragrafo', sans-serif;
 }
 .servicos .card_container {
   display: flex;
@@ -414,6 +430,8 @@ ANIMAÇÃO (entrada esquerda/direita)
 
 .servicos .card_container .card .info_card span {
   color: var(--cor-texto);
+  font-family: 'Neo_paragrafo', sans-serif;
+
 }
 .servicos .card_container .card .imagem_card {
   width: 100%;
@@ -441,6 +459,7 @@ ANIMAÇÃO (entrada esquerda/direita)
 }
 .servicos .card_container .card .acao button a {
   color: var(--cor-preta);
+font-family: 'Neo', sans-serif;
 }
 .ngolaIa {
   background-color: var(--cor-principal);
@@ -456,6 +475,7 @@ ANIMAÇÃO (entrada esquerda/direita)
 .ngolaIa h2 {
   color: var(--cor-branca);
   padding: 10px;
+  
 }
 .ngolaIa .info {
   display: flex;
@@ -471,6 +491,7 @@ ANIMAÇÃO (entrada esquerda/direita)
   padding: 10px;
   font-size: clamp(15px, 2vw, 16px);
   text-align: center;
+  font-family: 'Neo_paragrafo', sans-serif;
 }
 .ngolaIa button {
   padding: 10px 12px 10px 12px;
@@ -484,6 +505,7 @@ ANIMAÇÃO (entrada esquerda/direita)
 
 .ngolaIa button a {
   color: var(--cor-branca);
+  font-family: 'Neo', sans-serif;
 }
 #contactos .cabeca_contactos {
   justify-content: center;
@@ -497,6 +519,7 @@ ANIMAÇÃO (entrada esquerda/direita)
 #contactos .cabeca_contactos p {
   font-size: clamp(14px, 2vw, 15px);
   color: var(--cor-texto);
+  font-family: 'Neo_paragrafo', sans-serif;
 }
 #contactos .dados {
   display: flex;
@@ -508,6 +531,7 @@ ANIMAÇÃO (entrada esquerda/direita)
 }
 #contactos .dados input,
 textarea {
+  font-family: 'Neo', sans-serif;
   width: 80%;
   padding: 10px;
   border: none;
@@ -527,6 +551,7 @@ textarea {
   border: none;
   background-color: var(--cor-principal);
   color: var(--cor-branca);
+  font-family: 'Neo', sans-serif;
 }
 
 
