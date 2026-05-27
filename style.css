@@ -29,7 +29,7 @@ body {
   padding: 25px;
   height: 70px;
   justify-content: space-between;
-  background: rgba(2, 112, 131, 0.977);
+  background: #00a4da;
   position: fixed;
   top: 0;
   z-index: 9999;
