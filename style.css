@@ -19,6 +19,7 @@
   
 body {
   background-color: var(--fundo-corpo);
+  font-family: var(--font_titulo);
 }
 
 .cabecalho {
@@ -258,7 +259,6 @@ body {
 }
 .provincias .titulo h2 {
   font-size: clamp(25px, 2vw, 30px);
-  font-family: var(--font_titulo);
   text-align: center;
 }
 
@@ -272,6 +272,7 @@ body {
 }
 .provincias .frase_curta span {
   text-align: center;
+
 }
 .provincias .container_img {
   display: flex;
@@ -284,7 +285,7 @@ body {
 }
 
 /* =========================
-   CARDS BASE (teu design)
+   CARDS BASE 
 ========================= */
 
 .provincias .container_img a {
@@ -295,7 +296,6 @@ body {
   align-items: center;
   text-align: center;
   color: #fff;
-  font-family: var(--font_titulo);
   font-size: clamp(18px, 2vw, 20px); /* corrigido */
   font-weight: 900;
   border-radius: 50px;
@@ -332,7 +332,7 @@ body {
 
 .benguela {
   background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)),
-    url(img/provincias/benguela.jpg);
+  url(img/provincias/benguela.jpg);
 }
 
 .namibe {
@@ -341,7 +341,7 @@ body {
 }
 
 /* =========================
-   ANIMAÇÃO (entrada esquerda/direita)
+ANIMAÇÃO (entrada esquerda/direita)
 ========================= */
 
 .provincias .container_img a.left {
@@ -364,9 +364,17 @@ body {
 .servicos {
   height: auto;
   margin-top: 10px;
-  background-color: #F1F3F5;
+  background-color: #f5f3f3;
 }
 
+.servicos .info_servicos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
 .servicos .info_servicos h2 {
   color: black;
   font-family: var(--font_titulo);
@@ -397,21 +405,15 @@ body {
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
 }
 .servicos .card_container .card .info_card {
+  gap: 10px;
   padding: 10px;
-  width: 100%;
-  height:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 35px;
 }
-.servicos .card_container .card .info_card h2 {
-  padding: 1px;
-  font-family: var(--font_titulo);
-}
+
 .servicos .card_container .card .info_card span {
   color: var(--cor-texto);
-  height: 90px;
 }
 .servicos .card_container .card .imagem_card {
   width: 100%;
@@ -424,7 +426,6 @@ body {
   border-radius: 10px;
 }
 .servicos .card_container .card .info_card .acao {
-  padding: 5px;
   height: 50px;
   display: flex;
   position: relative;
@@ -441,14 +442,6 @@ body {
 .servicos .card_container .card .acao button a {
   color: var(--cor-preta);
 }
-.servicos .info_servicos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5px;
-}
 .ngolaIa {
   background-color: var(--cor-principal);
   display: flex;
@@ -458,12 +451,11 @@ body {
   padding: 12px;
   text-align: center;
   height: 40vh;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 .ngolaIa h2 {
   color: var(--cor-branca);
   padding: 10px;
-  font-family: var(--font_titulo);
 }
 .ngolaIa .info {
   display: flex;
@@ -501,7 +493,6 @@ body {
 }
 #contactos .cabeca_contactos h2 {
   padding: 10px;
-  font-family: var(--font_titulo);
 }
 #contactos .cabeca_contactos p {
   font-size: clamp(14px, 2vw, 15px);

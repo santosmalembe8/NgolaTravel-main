@@ -13,6 +13,7 @@
   --cor-preta: #000;
   --cor-texto: #4a4a4a;
   --fundo-corpo: #edefea;
+  --fonte-padrao:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -21,6 +22,8 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  font-family: var(--fonte-padrao );
+
 }
 
 /* LOGIN */
@@ -41,7 +44,6 @@ body{
 }
 
 .boas_vindas h2{
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -79,9 +81,9 @@ body{
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: var(--cor-texto);
+  color: var(--cor-texto); 
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:var();
 }
 
 .usuario img,

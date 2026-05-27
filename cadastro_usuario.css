@@ -25,7 +25,7 @@ body {
 }
 
 .cadastro {
-    margin: 40px auto;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,16 +74,18 @@ form .nome  label{
 }
 form .nome .nome1 img{
     position: absolute;
-    top: 15px;
+    top: 16px;
     left: 10px;
 }
 
 form .nome .nome1 input{
     font-family: var(--font-padrao);
-    border-radius: 10px;
     width: 300px;
-    border: 1px solid var(--cor-principal);
-    padding: 10px 25px 10px 25px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid var(--cor-principal);
+    padding: 12px 25px 12px 25px;
+    outline: none;
 }
 
 
@@ -94,7 +96,7 @@ form .criar{
     align-items: center;
     justify-self: center;
     padding: 10px;
-    gap: 10px;
+    gap: 15px;
     width: 96%;
 }
 
