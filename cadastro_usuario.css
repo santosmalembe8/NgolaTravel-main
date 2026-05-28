@@ -14,6 +14,7 @@
   --cor-texto: #4a4a4a;
   --fundo-corpo: #edefea;
    --font_titulo: 'Neo',sans-serif;
+   --font_sub_titulo:'Neo_sub_titulo';
   --font_texto:'Neo_paragrafo', sans-serif;
 }
 
@@ -25,6 +26,10 @@
   @font-face {
     font-family: 'Neo_paragrafo';
     src: url(Font/Titillium/TitilliumMaps29L-400wt.otf);
+  }
+  @font-face {
+    font-family: 'Neo_sub_titulo';
+    src: url(Font/Titillium/TitilliumText22L-600wt.otf);
   }
 body {
     background-image: url(img/fundo/FUNDO\ AZUL\ AZUL\ BRANCO.png);
@@ -84,7 +89,7 @@ form .nome .nome1{
     width: 100%;
 }
 form .nome  label{
-    font-family: var(--font_texto);
+    font-family:var(--font_sub_titulo);
     margin-left: 8px;
     color: var(--cor-texto);
 }
@@ -99,7 +104,7 @@ form .nome .nome1 input{
     width: 300px;
     border: none;
     background: transparent;
-    border-bottom: 1px solid var(--cor-principal);
+    border-bottom: 1px solid #ccc;
     padding: 12px 25px 12px 25px;
     outline: none;
 }
