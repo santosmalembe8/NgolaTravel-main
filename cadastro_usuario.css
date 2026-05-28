@@ -12,20 +12,38 @@
   --cor-branca: #fff;
   --cor-preta: #000;
   --cor-texto: #4a4a4a;
-  --font-padrao: Arial, Helvetica, sans-serif;
   --fundo-corpo: #edefea;
+   --font_titulo: 'Neo',sans-serif;
+  --font_texto:'Neo_paragrafo', sans-serif;
 }
 
+@font-face {
+  font-family: 'Neo';
+  src: url(Font/Titillium/TitilliumMaps29L-800wt.otf);
+}
+
+  @font-face {
+    font-family: 'Neo_paragrafo';
+    src: url(Font/Titillium/TitilliumMaps29L-400wt.otf);
+  }
 body {
-    background-image: url(img/fundo/angola.png);
+    background-image: url(img/fundo/FUNDO\ AZUL\ AZUL\ BRANCO.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 108vh;
+    height: 99.5vh;
+    background-color: white;
 }
 
+
+header{
+    padding: 10px;
+}
+header img{
+    width: 70px;
+}
 .cadastro {
-    margin: 30px auto;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,19 +62,16 @@ body {
 }
 
 .cadastro .cabeca h3{
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--cor-principal);
+    font-family: var(--font_titulo);
+    color: var(--cor-branca);
 }
 
 .cadastro .cabeca span{
-    color: var(--cor-texto);
-    font-family: var(--font-padrao);
+    color: #E8F3F9;
+    font-family:var(--font_texto);
 }
 
-form{
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(10px);
-}
+
 form .nome{
     padding: 10px;
 }
@@ -69,8 +84,9 @@ form .nome .nome1{
     width: 100%;
 }
 form .nome  label{
-    font-family: var(--font-padrao);
+    font-family: var(--font_texto);
     margin-left: 8px;
+    color: var(--cor-texto);
 }
 form .nome .nome1 img{
     position: absolute;
@@ -79,7 +95,7 @@ form .nome .nome1 img{
 }
 
 form .nome .nome1 input{
-    font-family: var(--font-padrao);
+    font-family: var(--font_texto);
     width: 300px;
     border: none;
     background: transparent;
@@ -88,10 +104,13 @@ form .nome .nome1 input{
     outline: none;
 }
 
-
+form .area_entrar{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
 form .criar{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     justify-self: center;
@@ -99,7 +118,14 @@ form .criar{
     gap: 15px;
     width: 96%;
 }
+form .area_acao .area_entrar{
+    display: flex;
+    justify-content: end;
+}
+form .area_acao span{
+  color: var(--cor-texto);
 
+}
 form .criar button{
     width: 100%;
     padding: 10px;
@@ -108,19 +134,26 @@ form .criar button{
     cursor: pointer;
     border: none;
 } 
-form .criar button:hover{
-    border: 1px solid var(--cor-principal);
-    background-color: transparent;
-    transition: 0.6s ease-in-out;
+form .criar .area_entrar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
 }
+form .criar .entrar{
+    background-color: transparent;
+    border: 1px solid var(--cor-principal);
+}
+form .criar .entrar a{
+    color: var(--cor-principal);
+}
+
 form .criar button a{
     color: var(--cor-branca);
     font-family: var(--font-padrao);
 }
 
-form .criar button:hover a{
-    color: var(--cor-principal);
-}
+
 
 form .criar span{
     gap: 10px;
@@ -132,3 +165,4 @@ form .criar span{
 form .criar span a{
     color: var(--cor-principal);
 }
+    
