@@ -13,11 +13,14 @@
   --cor-preta: black;
   --cor-texto: #4a4a4a;
   --fundo-corpo: #edefea;
-  --font_titulo: Arial, Helvetica;
+  --font_titulo: 'Neo',sans-serif;
+  --font_texto:'Neo_paragrafo', sans-serif;
   --cor-preta_segundaria: #242424;
-}@font-face{
-  font-family: 'Neo_botão';
-  src: url(Font/Titillium/TitilliumText22L-600wt.otf)
+}
+
+@font-face {
+  font-family: 'Neo';
+  src: url(Font/Titillium/TitilliumMaps29L-800wt.otf);
 }
 
   @font-face {
@@ -26,7 +29,7 @@
   }
 body {
   background-color: var(--fundo-corpo);
-  font-family: 'Neo',sans-serif;
+  font-family: var(--font_titulo);
 }
 
 .cabecalho {
@@ -36,11 +39,19 @@ body {
   padding: 25px;
   height: 70px;
   justify-content: space-between;
-  background: #00a4da;
+  align-items: center;
+  overflow-y: hidden;
+  background-color: var(--cor-principal);
   position: fixed;
   top: 0;
   z-index: 9999;
 }
+.logotipo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* BOTÃO MOBILE (hamburger) */
 .btn_mobile {
@@ -77,7 +88,7 @@ body {
   left: 0;
   bottom: -100%;
   width: 100%;
-  background:#00a4da;
+  background-color:var(--cor-principal);
   backdrop-filter: blur(20px);
   transition: 0.4s ease-in-out;
   z-index: 10000;
@@ -85,10 +96,6 @@ body {
 }
 
 /* QUANDO ABRIR */
-@font-face {
-  font-family: 'Neo';
-  src: url(Font/Titillium/TitilliumMaps29L-800wt.otf);
-}
 #nav_bar.mostrar {
   bottom: 0;
 }
@@ -98,7 +105,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr ;
   gap: 15px;
-  font-family:;
+  font-family:'';
   padding: 20px;
   justify-content: center;
   align-items: center;
@@ -286,7 +293,7 @@ body {
 }
 .provincias .frase_curta span {
   text-align: center;
-  font-family: 'Neo_paragrafo';
+  font-family: 'Neo_paragrafo', sans-serif;
 
 }
 .provincias .container_img {

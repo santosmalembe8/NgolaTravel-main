@@ -7,7 +7,7 @@
   scroll-behavior: smooth;
 }
 :root {
-  --cor-principal: #086785;
+  --cor-principal: #00a4da;
   --cor-branca: white;
   --cor-preta: black;
   --cor-texto: #4a4a4a;
@@ -26,7 +26,8 @@ body {
   padding: 25px;
   height: 70px;
   justify-content: space-between;
-  background: rgba(2, 112, 131, 0.977);
+  align-items: center;
+  background-color:var(--cor-principal);
   position: fixed;
   top: 0;
   z-index: 9999;
